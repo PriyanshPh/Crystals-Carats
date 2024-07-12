@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: rgba(210, 127, 127, 0.5);
+            overflow: hidden; */
+            /* Prevent background scroll when popup is visible */
+        }
+
+        .popup {
+            display: flex;
+            position: fixed;
+            display: none;
+            z-index: 10;
+            background: rgba(210, 127, 127, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content d00">
+            <img src="img/login.jpg" alt="">
+        </div>
+        <div class="d01">
+            <div class="d010">
+                <a href="#" id="signup-link" class="active">Sign Up</a>
+                <a href="#" id="login-link">Login</a>
+            </div>
+            <p>Sign up & get Rs. 500 off* coupon code for your first purchase!</p>
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="John Doe"><br><br>
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" value="Password123"><br><br>
+                <input type="checkbox" id="agree" name="agree">
+                <label for="agree">I agree to the Terms of use and Privacy Statement.</label><br><br>
+                <input type="submit" value="Sign Up">
+            </form>
+            <p>Already have an account? <a href="#" id="login-link">Login now</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.getElementById('popup').style.display = 'block';
+            }, 10000);
+
+            document.getElementById('close-btn').addEventListener('click', function () {
+                document.getElementById('popup').style.display = 'none';
+            });
+
+            // Toggle OTP input for email verification
+            document.getElementById('verify-email').addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent form submission
+                document.querySelector('.email-verify').style.display = 'none';
+                document.querySelector('.otp-input:nth-of-type(1)').style.display = 'block';
+            });
+
+            // Toggle OTP input for contact number verification
+            document.getElementById('verify-contact').addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent form submission
+                document.querySelector('.contact-verify').style.display = 'none';
+                document.querySelector('.otp-input:nth-of-type(2)').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C&C</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- Nav Section -->
+    <nav class="n0">
+      <div class="icon">
+        <!-- <i id="srch" class="fa fa-search" style="margin-right: 20px;"></i> -->
+        <i id="menu" class="fa-solid fa-bars"></i>
+      </div>
+      <div class="navbar-left">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Blogs.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <a href="index.html"><img src="img/logoimg.png" alt="LOGO" /></a>
+      </div>
+      <div class="navbar-right">
+        <a href="wishlist.html"><i class="far fa-heart"></i></a>
+        <!-- <a href=""><i class='fas fa-heart'></i></a> -->
+        <a href="#" class="login-icon" onclick="openLoginPopup()"
+          ><i class="fa-solid fa-user-plus"></i
+        ></a>
+        <!-- <a href="shopcart.html"><i class="far fa-shopping-cart"></i></a> -->
+        <a href="shopcart.html"><i class="fas fa-shopping-cart"></i></a>
+        <!-- <a href="#" class="login-icon" onclick="openLoginPopup()"><i class="fa-solid fa-user-plus"></i></a> -->
+      </div>
+    </nav>
+    <!-- Popup Form -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+        <div class="d00">
+          <img src="img/login.jpg" alt="" />
+        </div>
+        <div class="d01">
+          <div class="d010">
+            <a href="#" id="signup-link" class="active">Sign Up</a>
+            <a href="#" id="login-link">Login</a>
+          </div>
+          <div class="d011 active" id="signup-content">
+            <p>
+              Sign up & get Rs. 500 off* coupon code for your first purchase!
+            </p>
+            <form>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value="John Doe"
+              /><br /><br />
+              <label for="email">Email:</label>
+              <!-- <div class="email-verify"> -->
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value="john@example.com"
+              />
+              <button id="verify-email" type="button">Verify</button>
+              <!-- Change type to button -->
+              <!-- </div> -->
+              <!-- <br><br>
+                        <div class="otp-input" style="display: none;">
+                            <label for="otp">Enter OTP:</label>
+                            <input type="text" id="otp" name="otp">
+                        </div> -->
+              <br /><br />
+              <label for="contact">Contact Number:</label>
+              <!-- <div class="contact-verify"> -->
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                value="1234567890"
+              />
+              <button id="verify-contact" type="button">Verify</button>
+              <!-- Change type to button -->
+              <!-- </div> -->
+              <br /><br />
+              <!-- <div class="otp-input" style="display: none;">
+                            <label for="contact-otp">Enter OTP:</label>
+                            <input type="text" id="contact-otp" name="contact-otp">
+                        </div>
+                        <br><br> -->
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value="Password123"
+              /><br /><br />
+              <label for="confirm-password">Confirm Password:</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                value="Password123"
+              /><br /><br />
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree"
+                >I agree to the Terms of use and Privacy Statement.</label
+              ><br /><br />
+              <button type="submit" id="submit">Sign Up</button>
+            </form>
+            <p>
+              Already have an account? <a href="#" id="login-link">Login now</a>
+            </p>
+          </div>
+          <div class="d012" id="login-content">
+            <form>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" /><br /><br />
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+              /><br /><br />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="d1">
+      <img src="img/img1.jpg" alt="" class="d1i1" />
+      <div class="d11">
+        <img src="img/ne.webp" alt="" />
+        <img src="img/img2.jpg" alt="" />
+      </div>
+    </div>
+    <!-- Section: 2 -->
+    <div class="d2">
+      <h1>Browse By Category</h1>
+      <p id="d2p1" style="text-shadow: 0px 4px 4px #00000040">
+        Discover elegance at your fingertips
+      </p>
+      <div class="d21">
+        <div class="d211">
+          <p style="font-size: 2.2vw">Crystals</p>
+          <div class="d2111">
+            <div class="d21111">
+              <img src="img/gemstone.jpg" alt="" />
+              <p>GEMSTONE</p>
+            </div>
+            <div class="d21112">
+              <img src="img/diamond.jpg" alt="" />
+              <p>DIAMOND</p>
+            </div>
+          </div>
+        </div>
+        <div class="d212">
+          <p style="font-size: 2.2vw">Carats</p>
+          <div class="d2121">
+            <div class="d21211">
+              <img src="img/gold.jpg" alt="" />
+              <p>GOLD</p>
+            </div>
+            <div class="d21212">
+              <img src="img/bangles1.png" alt="" />
+              <p>PLATINUM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section: 3 -->
+    <div class="d3">
+      <h1>Best Sellers</h1>
+      <p id="d3p1">Timeless elegance meets contemporary style</p>
+      <img src="img/Line-Design.svg" alt="" />
+      <div class="d30">
+        <div class="d31">
+          <div>
+            <img src="img/coin.jpg" alt="" />
+            <p>Coins</p>
+            <img src="img/new-necklace.webp" alt="" />
+            <p>Necklace</p>
+          </div>
+          <div>
+            <img src="img/new-earrings.jpg" alt="" />
+            <p>Ear Rings</p>
+            <img src="img/new-nose-pins.webp" alt="" />
+            <p>Nose Pins</p>
+          </div>
+        </div>
+        <div class="d32">
+          <div>
+            <img src="img/bracelet.webp" alt="" />
+            <p>Bracelet</p>
+            <img src="img/new-finger-rings.webp" alt="" />
+            <p>Rings</p>
+          </div>
+          <div>
+            <img src="img/gold bangles.jpg" alt="" />
+            <p>Bangles</p>
+            <img src="img/new-pendant-sets.jpg" alt="" />
+            <p>Pendent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d4">
+      <h1>Bridal Jewellery Special</h1>
+      <p class="d4p1">Be the bride you always dreamt of</p>
+      <img src="img/Line-Design.svg" alt="" />
+      <div class="d41">
+        <div class="d411">
+          <img src="img/8_Mararashtrian.png" alt="" />
+          <p>Enchanting</p>
+        </div>
+        <div class="d412">
+          <img src="img/show-stopper.png" alt="" />
+          <p>Trendsetter</p>
+        </div>
+        <div class="d413">
+          <img src="img/12_gujarati.png" alt="" />
+          <p>Dazzling</p>
+        </div>
+      </div>
+    </div>
+    <!-- Section: 5 -->
+    <div class="d5">
+      <div class="d51">
+        <h1>GIFT CARDS</h1>
+      </div>
+    </div>
+    <!-- Section: 6 -->
+    <div class="d6">
+      <h1>Shop By Gender</h1>
+      <p class="d6p1">
+        First-class jewelry for first-class Men, Women & Children.
+      </p>
+      <div class="d61">
+        <a href="Men.html">
+          <div>
+            <img src="img/men.jpg" alt="" />
+            <p>Men</p>
+          </div>
+        </a>
+        <a href="Women.html"
+          ><div>
+            <img src="img/women.webp" alt="" />
+            <p>Women</p>
+          </div></a
+        >
+        <a href="Kids.html">
+          <div>
+            <img src="img/kids.png" alt="" />
+            <p>Kids</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Section: 7 -->
+    <div class="d7">
+      <video src="video/v2.mp4" autoplay loop preload="auto"></video>
+    </div>
+    <!-- Section: 8 -->
+    <div class="d8">
+      <h1>Recommendation For You</h1>
+      <p id="d8p1">Style meets the pulse of fashion</p>
+      <img src="img/Line-Design.svg" alt="" />
+      <div class="d81">
+        <div class="d811">
+          <img src="img/Birthday.jpg" alt="" />
+          <img src="img/anniversary.jpg" alt="" />
+        </div>
+        <div class="d812">
+          <img src="img/Personalized.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="f">
+      <div class="f1">
+        <div class="f11">
+          <h2>Address</h2>
+          <p>
+            Crystals & Carats <br />
+            Plot No 44, 45, Street Number 14, <br />
+            Marol MIDC Industry Estate, <br />
+            Andheri East, Mumbai - 400093
+          </p>
+          <h2>Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30158.907953078757!2d72.84913416644628!3d19.11364350427949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83c05b7fc89%3A0xbe87eb057f3aafda!2sAndheri%2C%20Maharashtra%20400053!5e0!3m2!1sen!2sin!4v1716273130741!5m2!1sen!2sin"
+            width="91%"
+            height="110vh"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="f12">
+          <a href="About.html" style="text-decoration: none"
+            ><h2>Help & Info</h2></a
+          >
+          <p>About Crystals & Carats <br />Careers <br />Blogs <br />FAQs</p>
+        </div>
+        <div class="f13">
+          <h2>Contact Us</h2>
+          <i class="fa-solid fa-phone" style="display: flex"
+            >&nbsp;&nbsp;
+            <p>1809-908-5647</p></i
+          >
+          <i class="fa-solid fa-envelope" style="display: flex"
+            >&nbsp;&nbsp;
+            <p>Get in Touch</p></i
+          >
+          <i class="fa-solid fa-message" style="display: flex"
+            >&nbsp;&nbsp;
+            <p>Chat With Us</p></i
+          >
+        </div>
+        <div class="f14">
+          <h2>Useful links</h2>
+          <p>
+            Privacy Policy <br />
+            Terms of Use <br />Payment Issues <br />Net Banking <br />Custom
+            Jewellery
+          </p>
+        </div>
+      </div>
+      <div class="f2">
+        <h2>
+          Follow Us on: <i class="fa-brands fa-facebook-f"></i
+          ><i class="fa-brands fa-instagram"></i
+          ><i class="fa-brands fa-whatsapp"></i
+          ><i class="fa-brands fa-twitter"></i>
+        </h2>
+      </div>
+      <div class="f3">
+        <h2>@2023 Crystals & Carats. All Rights Reserved.</h2>
+      </div>
+    </div>
+    <!-- Js file Link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
